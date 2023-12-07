@@ -12,7 +12,6 @@ class Server {
 
   constructor() {
     this.app = express();
-    console.log(PORT);
     this.port = PORT || 3000;
     this.setupMiddleware();
     this.setupRoutes();
