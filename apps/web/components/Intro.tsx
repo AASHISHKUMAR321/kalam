@@ -2,7 +2,7 @@ import React from "react";
 
 const Intro = () => {
   return (
-    <div className="w-full h-[550px] bg-yellow-400 text-white pt-32 flex justify-around">
+    <div className="w-full h-[550px] bg-yellow-400 text-white pt-32 flex justify-center gap-32">
       <div className="flex flex-col gap-10 text-black">
         <header className="text-8xl"> Stay curious.</header>
         <div className="text-2xl w-[450px]">
@@ -16,9 +16,9 @@ const Intro = () => {
       </div>
       <div>
         <iframe
-          src="https://lottie.host/embed/4c987256-0955-43f0-b85f-3704779c34f7/dq8MWm3xk1.json"
-          width={"400px"}
-          height={"350px"}
+          src="https://lottie.host/embed/d2c56a4c-241d-4d09-a2d8-1e4283320195/MuocBhGlU2.json"
+          width={"100px"}
+          height={"300px"}
         ></iframe>
       </div>
     </div>

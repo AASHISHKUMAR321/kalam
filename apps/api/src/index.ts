@@ -1,25 +1,14 @@
-// import { createServer } from "./server";
-// import { log } from "@repo/logger";
-
 import Server from "./server";
+import Database from "./database/db";
+import { MONGODB_URI } from "./config/env.config";
 
-// const port = process.env.PORT || 3001;
-// const server = createServer();
-
-// server.listen(port, () => {
-//   log(`api running on ${port}`);
-// });
-
-// import { createServer } from "./server";
-// import { log } from "@repo/logger";
-
-// const port = process.env.PORT || 3001;
-// const server = createServer();
-
-// server.listen(port, () => {
-//   log(`api running on ${port}`);
-// });
+const database = new Database(MONGODB_URI ?? "");
 
 const server = new Server();
+
+database
+  .connect()
+  .then(() => server.start())
+  .catch((err) => console.log(`unable to start server${err}`));
 
 server.start();
